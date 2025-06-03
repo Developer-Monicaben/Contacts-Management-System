@@ -19,7 +19,7 @@ def Add_Contacts():
     if len(MobileNumber) != 10 or not MobileNumber.isdigit():
         messagebox.showerror("Input Error", "Mobile number must be exactly 10 digits.")
     else:
-        messagebox.showerror("Success", "Contact Added Succesfully !!")
+        messagebox.showinfo("Success", "Contact Added Succesfully !!")
         
     cursor.execute("INSERT INTO contacts (name, mobile) VALUES (%s, %s)", (name, MobileNumber))
     conn.commit()
